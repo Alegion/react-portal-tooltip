@@ -34,7 +34,7 @@ class Card extends React.Component {
     width: 0,
     height: 0
   }
-  margin = 5
+  margin = 0
   defaultArrowStyle = {
     color: '#fff',
     borderColor: 'rgba(0,0,0,.4)'
