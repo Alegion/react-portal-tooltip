@@ -8,6 +8,7 @@ class Card extends React.Component {
     active: PropTypes.bool,
     position: PropTypes.oneOf([
       'top',
+      'topLeft',
       'right',
       'bottom',
       'left'
@@ -130,7 +131,7 @@ class Card extends React.Component {
       bgStyle.borderLeft = bgTransBorder
       bgStyle.borderRight = bgTransBorder
 
-      if (position === 'top') {
+      if (/^top/.test(position)) {
         fgStyle.bottom = -10
         fgStyle.borderTop = fgColorBorder
         bgStyle.bottom = -11
@@ -200,6 +201,10 @@ class Card extends React.Component {
       bottom: () => {
         style.left = left - this.state.width / 2 + parent.offsetWidth / 2
         style.top = top + parent.offsetHeight + this.margin
+      },
+      topLeft: () => {
+        style.left = left - this.state.width / 2 + 40
+        style.top = top - this.state.height - this.margin
       },
     }
 

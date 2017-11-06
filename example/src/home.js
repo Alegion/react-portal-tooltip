@@ -92,6 +92,7 @@ export default class Home extends Component {
                 <option value="right">right</option>
                 <option value="bottom">bottom</option>
                 <option value="left">left</option>
+                <option value="topLeft">topLeft</option>
               </select>
             </div>
             <div className="col-lg-3">
